@@ -1,0 +1,21 @@
+class Data {
+    int value = 50;
+}
+public class Main {
+    void changeValue(int val) {
+        val = val + 100;
+    }
+    void changeReference(Data d) {
+        d.value = d.value + 100;
+    }
+    public static void main(String[] args) {
+        Main obj = new Main();
+        int a = 10;
+        obj.changeValue(a);
+        System.out.println(a);
+        
+        Data data = new Data();
+        obj.changeReference(data);
+        System.out.println(data.value);
+    }
+}
