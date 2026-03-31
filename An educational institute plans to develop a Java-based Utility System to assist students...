@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+class LogicOperations {
+    void processLogic(int num) {
+        if (num % 2 == 0) {
+            System.out.println("Even");
+        } else {
+            System.out.println("Odd");
+        }
+    }
+}
+
+public class UtilitySystem {
+    public static void main(String[] args) {
+        System.out.println("Welcome to the Utility System");
+        
+        int a = 10;
+        int b = 5;
+        System.out.println("Addition: " + (a + b));
+        
+        int fact = 1;
+        for (int i = 1; i <= 5; i++) {
+            fact *= i;
+        }
+        System.out.println("Factorial of 5: " + fact);
+        
+        LogicOperations logic = new LogicOperations();
+        logic.processLogic(a);
+        
+        if (args.length > 0) {
+            int cmdNum = Integer.parseInt(args[0]);
+            System.out.println("Command line input: " + cmdNum);
+        }
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int userInput = scanner.nextInt();
+        
+        if (userInput > 0) {
+            System.out.println("Positive");
+        } else if (userInput < 0) {
+            System.out.println("Negative");
+        } else {
+            System.out.println("Zero");
+        }
+        scanner.close();
+    }
+}
