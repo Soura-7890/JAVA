@@ -1,0 +1,20 @@
+abstract class Accounts {
+    double balance; int accountNumber; String name, address;
+    abstract void withdraw();
+    abstract void deposit();
+    void display() { System.out.println(balance); }
+}
+class SavingsAccount extends Accounts {
+    double rateOfInterest;
+    void withdraw() {}
+    void deposit() {}
+    void calculateAmount() { System.out.println(balance + (balance * rateOfInterest)); }
+}
+public class Main {
+    public static void main(String[] args) {
+        SavingsAccount sa = new SavingsAccount();
+        sa.balance = 1000;
+        sa.rateOfInterest = 0.05;
+        sa.calculateAmount();
+    }
+}
