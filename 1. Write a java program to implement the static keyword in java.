@@ -1,0 +1,11 @@
+class Demo {
+    static int count = 0;
+    Demo() { count++; }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Demo();
+        new Demo();
+        System.out.println(Demo.count);
+    }
+}
