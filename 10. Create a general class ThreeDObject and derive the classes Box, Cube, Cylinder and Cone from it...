@@ -1,0 +1,35 @@
+class ThreeDObject {
+    double wholeSurfaceArea() { return 0; }
+    double volume() { return 0; }
+}
+class Box extends ThreeDObject {
+    double l, w, h;
+    Box(double l, double w, double h) { this.l = l; this.w = w; this.h = h; }
+    double wholeSurfaceArea() { return 2 * (l*w + w*h + h*l); }
+    double volume() { return l * w * h; }
+}
+class Cube extends ThreeDObject {
+    double a;
+    Cube(double a) { this.a = a; }
+    double wholeSurfaceArea() { return 6 * a * a; }
+    double volume() { return a * a * a; }
+}
+class Cylinder extends ThreeDObject {
+    double r, h;
+    Cylinder(double r, double h) { this.r = r; this.h = h; }
+    double wholeSurfaceArea() { return 2 * Math.PI * r * (r + h); }
+    double volume() { return Math.PI * r * r * h; }
+}
+class Cone extends ThreeDObject {
+    double r, h;
+    Cone(double r, double h) { this.r = r; this.h = h; }
+    double wholeSurfaceArea() { return Math.PI * r * (r + Math.sqrt(h*h + r*r)); }
+    double volume() { return Math.PI * r * r * (h / 3); }
+}
+public class Main {
+    public static void main(String[] args) {
+        Box b = new Box(1, 2, 3);
+        Cube c = new Cube(2);
+        System.out.println(b.volume() + " " + c.volume());
+    }
+}
