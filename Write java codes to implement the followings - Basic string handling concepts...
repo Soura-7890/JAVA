@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+        String s = "Hello World";
+        System.out.println(s.charAt(0));
+        System.out.println(s.compareTo("Hello"));
+        System.out.println(s.equals("Hello World"));
+        System.out.println(s.equalsIgnoreCase("hello world"));
+        System.out.println(s.indexOf('o'));
+        System.out.println(s.length());
+        System.out.println(s.substring(0, 5));
+        System.out.println(s.toCharArray()[0]);
+        System.out.println(s.toLowerCase());
+        System.out.println(s.toString());
+        System.out.println(s.toUpperCase());
+        System.out.println("  abc  ".trim());
+        System.out.println(String.valueOf(10));
+    }
+}
