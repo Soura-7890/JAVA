@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        try { int data = 25 / 5; } 
+        catch (NullPointerException e) {} 
+        finally { System.out.println("Finally block is always executed"); }
+
+        try { int data = 25 / 0; } 
+        catch (NullPointerException e) {} 
+        finally { System.out.println("Exception occurs, not handled"); }
+        
+        try { int data = 25 / 0; } 
+        catch (ArithmeticException e) {} 
+        finally { System.out.println("Exception occurs, handled"); }
+    }
+}
