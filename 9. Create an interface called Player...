@@ -1,0 +1,11 @@
+interface Player { void play(); }
+class Child implements Player { public void play() { System.out.println("Child plays"); } }
+class Musician implements Player { public void play() { System.out.println("Musician plays"); } }
+class Actor implements Player { public void play() { System.out.println("Actor plays"); } }
+public class Main {
+    public static void main(String[] args) {
+        new Child().play();
+        new Musician().play();
+        new Actor().play();
+    }
+}
