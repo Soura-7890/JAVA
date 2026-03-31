@@ -1,0 +1,12 @@
+public class Main {
+    public static void main(String[] args) {
+        int num = 153, original = num, result = 0;
+        while (original != 0) {
+            int remainder = original % 10;
+            result += Math.pow(remainder, 3);
+            original /= 10;
+        }
+        if (result == num) System.out.println("Armstrong");
+        else System.out.println("Not Armstrong");
+    }
+}
