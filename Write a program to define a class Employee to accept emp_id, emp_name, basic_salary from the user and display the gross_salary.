@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+class Employee {
+    int emp_id;
+    String emp_name;
+    double basic_salary;
+    void accept() {
+        Scanner sc = new Scanner(System.in);
+        emp_id = sc.nextInt();
+        emp_name = sc.next();
+        basic_salary = sc.nextDouble();
+    }
+    void displayGross() {
+        System.out.println(basic_salary * 1.5);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Employee e = new Employee();
+        e.accept();
+        e.displayGross();
+    }
+}
