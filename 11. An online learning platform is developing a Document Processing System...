@@ -1,0 +1,12 @@
+public class DocumentProcessor {
+    public static void main(String[] args) {
+        StringBuffer doc = new StringBuffer("Initial content.");
+        doc.append(" Added more.");
+        doc.replace(0, 7, "Starting");
+        System.out.println(doc.indexOf("more"));
+        System.out.println(doc.substring(9, 16));
+        doc.trimToSize();
+        String finalDoc = doc.toString();
+        System.out.println(finalDoc);
+    }
+}
