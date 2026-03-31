@@ -1,0 +1,10 @@
+class Demo {
+    Demo() { System.out.println("No args"); }
+    Demo(int a) { System.out.println("One arg"); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Demo();
+        new Demo(10);
+    }
+}
