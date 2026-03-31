@@ -1,0 +1,13 @@
+class Demo {
+    void display(int a) { System.out.println(a); }
+    void display(int a, int b) { System.out.println(a + b); }
+    void display(double a) { System.out.println(a); }
+}
+public class Main {
+    public static void main(String[] args) {
+        Demo d = new Demo();
+        d.display(5);
+        d.display(5, 10);
+        d.display(5.5);
+    }
+}
