@@ -1,0 +1,11 @@
+class MyThread extends Thread {
+    public void run() {
+        try { Thread.sleep(500); } catch (Exception e) {}
+        System.out.println("Woke up");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new MyThread().start();
+    }
+}
