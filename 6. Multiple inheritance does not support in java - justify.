@@ -1,0 +1,12 @@
+class A { void msg() { System.out.println("A"); } }
+class B { void msg() { System.out.println("B"); } }
+interface IA { void msg(); }
+interface IB { void msg(); }
+class C implements IA, IB {
+    public void msg() { System.out.println("C"); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new C().msg();
+    }
+}
