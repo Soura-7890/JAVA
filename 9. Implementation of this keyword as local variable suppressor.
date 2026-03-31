@@ -1,0 +1,11 @@
+class Demo {
+    int value = 10;
+    void method(int value) {
+        System.out.println(this.value);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Demo().method(20);
+    }
+}
