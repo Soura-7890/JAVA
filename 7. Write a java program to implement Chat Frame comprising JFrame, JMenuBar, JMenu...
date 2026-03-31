@@ -1,0 +1,24 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class Main {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Chat Frame");
+        JMenuBar mb = new JMenuBar();
+        JMenu m1 = new JMenu("FILE");
+        mb.add(m1);
+        JMenuItem m11 = new JMenuItem("Open");
+        m1.add(m11);
+        JPanel panel = new JPanel();
+        JLabel label = new JLabel("Enter Text");
+        JTextField tf = new JTextField(10);
+        JButton send = new JButton("Send");
+        panel.add(label);
+        panel.add(tf);
+        panel.add(send);
+        frame.getContentPane().add(BorderLayout.SOUTH, panel);
+        frame.getContentPane().add(BorderLayout.NORTH, mb);
+        frame.setSize(400, 400);
+        frame.setVisible(true);
+    }
+}
