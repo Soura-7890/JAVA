@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+        StringBuffer sb = new StringBuffer("Test");
+        sb.append(" App");
+        System.out.println(sb.capacity());
+        System.out.println(sb.charAt(1));
+        sb.delete(1, 2);
+        sb.deleteCharAt(0);
+        sb.ensureCapacity(50);
+        char[] arr = new char[5];
+        sb.getChars(0, 2, arr, 0);
+        System.out.println(sb.indexOf("p"));
+        sb.insert(1, "x");
+        System.out.println(sb.length());
+        sb.setCharAt(0, 'y');
+        sb.setLength(10);
+        System.out.println(sb.substring(0, 2));
+        System.out.println(sb.toString());
+    }
+}
