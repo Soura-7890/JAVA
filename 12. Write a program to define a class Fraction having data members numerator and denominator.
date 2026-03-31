@@ -1,0 +1,14 @@
+class Fraction {
+    int num, den;
+    Fraction() { num = 1; den = 1; }
+    Fraction(int n) { num = n; den = 1; }
+    Fraction(int n, int d) { num = n; den = d; }
+    void display() { System.out.println((double)num / den); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Fraction().display();
+        new Fraction(5).display();
+        new Fraction(5, 2).display();
+    }
+}
