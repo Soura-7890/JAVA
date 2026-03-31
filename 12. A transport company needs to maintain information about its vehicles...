@@ -1,0 +1,12 @@
+class Vehicle { String regNo; String brand; }
+class Engine extends Vehicle { String type; int capacity; }
+class CarDetails extends Engine {
+    void display() { System.out.println(regNo + " " + brand + " Eff: " + (capacity * 0.5)); }
+}
+public class Main {
+    public static void main(String[] args) {
+        CarDetails c = new CarDetails();
+        c.regNo = "123"; c.brand = "Toyota"; c.capacity = 1000;
+        c.display();
+    }
+}
