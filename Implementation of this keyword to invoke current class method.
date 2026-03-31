@@ -1,0 +1,11 @@
+class Demo {
+    void m() { System.out.println("m"); }
+    void n() {
+        this.m();
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Demo().n();
+    }
+}
