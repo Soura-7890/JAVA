@@ -1,0 +1,21 @@
+abstract class Shape { abstract double area(); abstract double peri(); }
+class Circle extends Shape {
+    double r = 5;
+    double area() { return Math.PI * r * r; }
+    double peri() { return 2 * Math.PI * r; }
+}
+class Rect extends Shape {
+    double l = 5, w = 4;
+    double area() { return l * w; }
+    double peri() { return 2 * (l + w); }
+}
+class Tri extends Shape {
+    double a = 3, b = 4, c = 5;
+    double area() { return 6; }
+    double peri() { return a + b + c; }
+}
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(new Circle().area());
+    }
+}
