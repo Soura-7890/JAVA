@@ -1,0 +1,14 @@
+class EmployeeInfo { int id; String name; double basic; }
+class Department extends EmployeeInfo { String deptName; int deptCode; }
+class Salary extends Department {
+    void displayTotal() {
+        System.out.println(id + " " + name + " " + deptName + " Total: " + (basic * 1.2));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Salary s = new Salary();
+        s.id = 1; s.name = "John"; s.basic = 10000; s.deptName = "IT";
+        s.displayTotal();
+    }
+}
