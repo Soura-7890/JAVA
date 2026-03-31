@@ -1,0 +1,10 @@
+public class Main {
+    int getValue() {
+        return 100;
+    }
+    public static void main(String[] args) {
+        Main obj = new Main();
+        int val = obj.getValue();
+        System.out.println(val);
+    }
+}
