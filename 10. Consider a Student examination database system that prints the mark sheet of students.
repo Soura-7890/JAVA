@@ -1,0 +1,16 @@
+class RangeException extends Exception {}
+public class Main {
+    public static void main(String[] args) {
+        try {
+            int total = 0;
+            for (int i = 1; i <= 6; i++) {
+                int marks = Integer.parseInt(args[i]);
+                if (marks < 0 || marks > 50) throw new RangeException();
+                total += marks;
+            }
+            System.out.println(args[0] + " %: " + ((total / 300.0) * 100));
+        } catch (RangeException e) {
+            System.out.println("Marks out of range");
+        }
+    }
+}
