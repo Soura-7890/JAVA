@@ -1,0 +1,16 @@
+class Point {
+    int x, y;
+    Point(int x, int y) { this.x = x; this.y = y; }
+}
+class Circle {
+    Point center;
+    double radius;
+    Circle(Point c, double r) { center = c; radius = r; }
+    void area() { System.out.println(Math.PI * radius * radius); }
+}
+public class Main {
+    public static void main(String[] args) {
+        Circle c = new Circle(new Point(0, 0), 5);
+        c.area();
+    }
+}
