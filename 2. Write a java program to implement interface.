@@ -1,0 +1,9 @@
+interface Printable { void print(); }
+class Document implements Printable {
+    public void print() { System.out.println("Printing"); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new Document().print();
+    }
+}
