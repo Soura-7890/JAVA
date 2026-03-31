@@ -1,0 +1,8 @@
+public class Main {
+    static void validate(int age) {
+        if (age < 18) throw new ArithmeticException("Not valid");
+    }
+    public static void main(String[] args) {
+        validate(13);
+    }
+}
