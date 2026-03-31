@@ -1,0 +1,20 @@
+class CounterThread extends Thread {
+    long count = 0;
+    public void run() {
+        long start = System.currentTimeMillis();
+        while (System.currentTimeMillis() - start < 10) {
+            count++;
+        }
+    }
+}
+public class Main {
+    public static void main(String[] args) throws InterruptedException {
+        CounterThread t1 = new CounterThread(); t1.setPriority(1);
+        CounterThread t2 = new CounterThread(); t2.setPriority(3);
+        CounterThread t3 = new CounterThread(); t3.setPriority(5);
+        CounterThread t4 = new CounterThread(); t4.setPriority(7);
+        t1.start(); t2.start(); t3.start(); t4.start();
+        t1.join(); t2.join(); t3.join(); t4.join();
+        System.out.println(t1.count + " " + t2.count + " " + t3.count + " " + t4.count);
+    }
+}
