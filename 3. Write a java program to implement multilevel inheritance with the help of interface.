@@ -1,0 +1,11 @@
+interface A { void m1(); }
+interface B extends A { void m2(); }
+class C implements B {
+    public void m1() { System.out.println("1"); }
+    public void m2() { System.out.println("2"); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new C().m1();
+    }
+}
