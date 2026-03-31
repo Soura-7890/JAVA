@@ -1,0 +1,9 @@
+import java.io.IOException;
+public class Main {
+    void m() throws IOException { throw new IOException("Device error"); }
+    public static void main(String[] args) {
+        try {
+            new Main().m();
+        } catch (Exception e) {}
+    }
+}
