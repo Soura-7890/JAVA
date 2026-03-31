@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class TextEditor {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        StringBuffer editor = new StringBuffer(sc.nextLine());
+        System.out.println(editor.toString());
+        System.out.println(editor.length() + " " + editor.capacity());
+        editor.append(sc.nextLine());
+        int pos = sc.nextInt();
+        System.out.println(editor.charAt(pos));
+        editor.insert(pos, sc.next());
+        System.out.println(editor.indexOf(sc.next()));
+        sc.close();
+    }
+}
