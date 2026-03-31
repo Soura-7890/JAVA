@@ -1,0 +1,13 @@
+class A {
+    B obj;
+    A(B obj) { this.obj = obj; }
+}
+class B {
+    int data = 10;
+    B() { A a = new A(this); }
+}
+public class Main {
+    public static void main(String[] args) {
+        new B();
+    }
+}
