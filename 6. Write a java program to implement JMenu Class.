@@ -1,0 +1,16 @@
+import javax.swing.*;
+
+public class Main {
+    public static void main(String[] args) {
+        JFrame f = new JFrame("Menu");
+        JMenuBar mb = new JMenuBar();
+        JMenu menu = new JMenu("File");
+        JMenuItem i1 = new JMenuItem("Item 1");
+        menu.add(i1);
+        mb.add(menu);
+        f.setJMenuBar(mb);
+        f.setSize(400, 400);
+        f.setLayout(null);
+        f.setVisible(true);
+    }
+}
