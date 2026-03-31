@@ -1,0 +1,9 @@
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class Main extends Applet {
+    public void paint(Graphics g) {
+        String msg = getParameter("msg");
+        g.drawString(msg != null ? msg : "No Param", 20, 20);
+    }
+}
