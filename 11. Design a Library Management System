@@ -1,0 +1,10 @@
+class LibraryItem { void info() {} }
+class Book extends LibraryItem { void info() { System.out.println("Book"); } }
+class Member { void borrow() {} }
+public class Main {
+    public static void main(String[] args) {
+        LibraryItem item = new Book();
+        item.info();
+        new Member().borrow();
+    }
+}
